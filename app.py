@@ -4,9 +4,11 @@ import numpy as np
 from PIL import Image
 import os
 
-# Load the SavedModel using tf.keras.models.load_model
-# This is the standard way to load SavedModels with TensorFlow 2.x
-model = tf.keras.models.load_model("saved_model")
+# Load saved model directory using TFSMLayer for Keras 3 SavedModel format
+# The endpoint name 'serve' was indicated during model.export()
+model = tf.keras.models.Sequential([
+    tf.keras.layers.TFSMLayer("saved_model", call_endpoint='serve')
+])
 
 IMG_SIZE = 224   # change if your model used a different size
 CLASSES = ["Control Group", "DM Group"]  # update as per your labels
