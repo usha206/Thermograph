@@ -7,7 +7,7 @@ pip install -r requirements.txt
 
 # 2. Download the saved_model.zip from Google Drive
 echo "Downloading saved_model.zip from Google Drive..."
-wget -O saved_model.zip "https://drive.google.com/uc?export=download&id=1Gq3xAJABpZIDQcCpRPLiMRaPidGcJLJ0"
+wget -O saved_model.zip "https://drive.google.com/drive/folders/1rOLp_GEBoPhMGFAAxy8nwEEDkKmxjn39?usp=sharing"
 
 # Check if download was successful
 if [ $? -ne 0 ]; then
